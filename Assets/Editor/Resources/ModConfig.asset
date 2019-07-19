@@ -13,7 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: bootTooBig
   title: BootTooBig
-  description: 
+  description: "Roses are red, Violets are blue. What why\u2019d you put this on a
+    bomb? WHAT\u2019S WRONG WITH YOU.\n\r\nModule by Blananas2\r\nImplemented by TheThirdMan\r\nmoduleID:
+    bootTooBig\r\n\r\nManual HTML: https://ktane.timwi.de/HTML/Boot%20Too%20Big.html\r\nManual
+    PDF: https://ktane.timwi.de/PDF/Boot%20Too%20Big.pdf\r\n\r\nGitHub Repository:
+    https://github.com/luisdiogo98/ktane-bootTooBig\n\r\nAny problems/suggestions,
+    feel free to contact me on the KTaNE Discord @TheThirdMan. Join the KTaNE Discord
+    here: https://discord.gg/Fv7YEDj"
   version: 1.0
   outputFolder: build
-  previewImage: {fileID: 0}
+  previewImage: {fileID: 2800000, guid: 9b70e85a4426cc8449731f8129902aa2, type: 3}
