@@ -232,4 +232,103 @@ public class BootTooBig : MonoBehaviour
 	
 		Debug.LogFormat("[Boot Too Big #{0}] Correct buttons are {1} and {2}.", moduleId, correctBtns.ElementAt(0) + 1, correctBtns.ElementAt(1) + 1);
 	}
+
+    //twitch plays
+    #pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"!{0} <button1> <button2> [Presses the buttons in the specified two positions] | Valid button positions are TL,TM,ML,MM,MR,BL,BM,BR";
+    #pragma warning restore 414
+
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        string[] parameters = command.Split(' ');
+        if(parameters.Length == 2)
+        {
+            if(parameters[0].EqualsIgnoreCase("TL") || parameters[0].EqualsIgnoreCase("TM") || parameters[0].EqualsIgnoreCase("ML") || parameters[0].EqualsIgnoreCase("MM") || parameters[0].EqualsIgnoreCase("MR") || parameters[0].EqualsIgnoreCase("BL") || parameters[0].EqualsIgnoreCase("BM") || parameters[0].EqualsIgnoreCase("BR"))
+            {
+                if (parameters[1].EqualsIgnoreCase("TL") || parameters[1].EqualsIgnoreCase("TM") || parameters[1].EqualsIgnoreCase("ML") || parameters[1].EqualsIgnoreCase("MM") || parameters[1].EqualsIgnoreCase("MR") || parameters[1].EqualsIgnoreCase("BL") || parameters[1].EqualsIgnoreCase("BM") || parameters[1].EqualsIgnoreCase("BR"))
+                {
+                    yield return null;
+                    if (parameters[0].EqualsIgnoreCase("TL"))
+                    {
+                        modules[0].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("TM"))
+                    {
+                        modules[1].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("ML"))
+                    {
+                        modules[2].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("MM"))
+                    {
+                        modules[3].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("MR"))
+                    {
+                        modules[4].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("BL"))
+                    {
+                        modules[5].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("BM"))
+                    {
+                        modules[6].OnInteract();
+                    }
+                    else if (parameters[0].EqualsIgnoreCase("BR"))
+                    {
+                        modules[7].OnInteract();
+                    }
+                    //To allow both module names to come through
+                    while (sound.isPlaying) yield return new WaitForSeconds(0.2f);
+                    if (parameters[1].EqualsIgnoreCase("TL"))
+                    {
+                        modules[0].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("TM"))
+                    {
+                        modules[1].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("ML"))
+                    {
+                        modules[2].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("MM"))
+                    {
+                        modules[3].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("MR"))
+                    {
+                        modules[4].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("BL"))
+                    {
+                        modules[5].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("BM"))
+                    {
+                        modules[6].OnInteract();
+                    }
+                    else if (parameters[1].EqualsIgnoreCase("BR"))
+                    {
+                        modules[7].OnInteract();
+                    }
+                }
+                else
+                {
+                    yield return "sendtochaterror Button #2 is not a valid button position! Valid button positions are TL,TM,ML,MM,MR,BL,BM,BR";
+                }
+            }
+            else
+            {
+                yield return "sendtochaterror Button #1 is not a valid button position! Valid button positions are TL,TM,ML,MM,MR,BL,BM,BR";
+            }
+        }
+        else
+        {
+            yield return "sendtochaterror I need exactly two buttons to press!";
+        }
+        yield break;
+    }
 }
