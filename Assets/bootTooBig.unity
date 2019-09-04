@@ -149,16 +149,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 23794980981966870, guid: 52a5b78c9e78e1f40b89b848dc2909cb,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 29b4b275ba36a3c479b5d8b917664486, type: 2}
-    - target: {fileID: 114682943674607128, guid: 52a5b78c9e78e1f40b89b848dc2909cb,
-        type: 2}
-      propertyPath: ModuleDisplayName
-      value: Boot Too Big
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52a5b78c9e78e1f40b89b848dc2909cb, type: 2}
   m_IsPrefabParent: 0

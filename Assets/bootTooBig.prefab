@@ -1545,7 +1545,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 957e72562d67af04f91cbf3c13513bc0, type: 2}
+  - {fileID: 2100000, guid: 29b4b275ba36a3c479b5d8b917664486, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3632,7 +3632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ModuleType: bootTooBig
-  ModuleDisplayName: BootTooBig
+  ModuleDisplayName: Boot Too Big
   RequiresTimerVisibility: 0
 --- !u!114 &114696200132115754
 MonoBehaviour:
